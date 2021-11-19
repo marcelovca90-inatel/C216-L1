@@ -111,7 +111,7 @@ const prefix = '/aluno';
 
 server.post(prefix + '/inserir', inserir);
 server.get(prefix + '/listar', listar);
-server.patch(prefix + '/atualizar', atualizar);
+server.put(prefix + '/atualizar', atualizar);
 server.del(prefix + '/excluir', excluir);
 
 const port = process.env.PORT || 5000;

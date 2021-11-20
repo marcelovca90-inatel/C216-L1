@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="examples.MiddlewareTest" time="3.106" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/target/test-classes:/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/target/classes:/Users/marcelocysneiros/.m2/repository/com/intuit/karate/karate-junit5/1.0.1/karate-junit5-1.0.1.jar:/Users/marcelocysneiros/.m2/repository/com/intuit/karate/karate-core/1.0.1/karate-core-1.0.1.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/js/js-scriptengine/21.0.0/js-scriptengine-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/sdk/graal-sdk/21.0.0/graal-sdk-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/js/js/21.0.0/js-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/regex/regex/21.0.0/regex-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/truffle/truffle-api/21.0.0/truffle-api-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/com/ibm/icu/icu4j/67.1/icu4j-67.1.jar:/Users/marcelocysneiros/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/marcelocysneiros/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/marcelocysneiros/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/marcelocysneiros/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar:/Users/marcelocysneiros/.m2/repository/com/jayway/jsonpath/json-path/2.5.0/json-path-2.5.0.jar:/Users/marcelocysneiros/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/marcelocysneiros/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/marcelocysneiros/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/marcelocysneiros/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/Users/marcelocysneiros/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/Users/marcelocysneiros/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/Users/marcelocysneiros/.m2/repository/de/siegmar/fastcsv/1.0.4/fastcsv-1.0.4.jar:/Users/marcelocysneiros/.m2/repository/info/picocli/picocli/4.5.2/picocli-4.5.2.jar:/Users/marcelocysneiros/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/marcelocysneiros/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/marcelocysneiros/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/marcelocysneiros/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/marcelocysneiros/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/marcelocysneiros/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/target/surefire/surefirebooter3428965622504197542.jar /Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/target/surefire 2021-11-20T00-03-43_220-jvmRun1 surefire8815812059764150660tmp surefire_03368472563533709550tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="test" value="MiddlewareTest"/>
+    <property name="surefire.test.class.path" value="/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/target/test-classes:/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/target/classes:/Users/marcelocysneiros/.m2/repository/com/intuit/karate/karate-junit5/1.0.1/karate-junit5-1.0.1.jar:/Users/marcelocysneiros/.m2/repository/com/intuit/karate/karate-core/1.0.1/karate-core-1.0.1.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/js/js-scriptengine/21.0.0/js-scriptengine-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/sdk/graal-sdk/21.0.0/graal-sdk-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/js/js/21.0.0/js-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/regex/regex/21.0.0/regex-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/org/graalvm/truffle/truffle-api/21.0.0/truffle-api-21.0.0.jar:/Users/marcelocysneiros/.m2/repository/com/ibm/icu/icu4j/67.1/icu4j-67.1.jar:/Users/marcelocysneiros/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/marcelocysneiros/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/marcelocysneiros/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/marcelocysneiros/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar:/Users/marcelocysneiros/.m2/repository/com/jayway/jsonpath/json-path/2.5.0/json-path-2.5.0.jar:/Users/marcelocysneiros/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/marcelocysneiros/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/marcelocysneiros/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/marcelocysneiros/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/Users/marcelocysneiros/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/Users/marcelocysneiros/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/Users/marcelocysneiros/.m2/repository/de/siegmar/fastcsv/1.0.4/fastcsv-1.0.4.jar:/Users/marcelocysneiros/.m2/repository/info/picocli/picocli/4.5.2/picocli-4.5.2.jar:/Users/marcelocysneiros/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/Users/marcelocysneiros/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/marcelocysneiros/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/marcelocysneiros/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/Users/marcelocysneiros/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/Users/marcelocysneiros/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/marcelocysneiros"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="karate.options" value="/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/src/test/java/middleware/aluno/aluno.feature"/>
+    <property name="surefire.real.class.path" value="/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test/target/surefire/surefirebooter3428965622504197542.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="1.8.0_144-b01"/>
+    <property name="user.name" value="marcelocysneiros"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/marcelocysneiros/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/xx/l62nt0d57xg3__60jsgdm3v40000gn/T/"/>
+    <property name="java.version" value="1.8.0_144"/>
+    <property name="user.dir" value="/Users/marcelocysneiros/git/marcelovca90-inatel/C216-L1/pratica-5/test"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/marcelocysneiros/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.144-b01"/>
+    <property name="java.ext.dirs" value="/Users/marcelocysneiros/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testParallel" classname="examples.MiddlewareTest" time="3.1"/>
+</testsuite>

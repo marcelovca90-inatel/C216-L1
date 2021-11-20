@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/middleware\/aluno\/aluno[1:3]","start":1637373825655,"end":1637373826195,"title":"src\/test\/java\/middleware\/aluno\/aluno[1:3] 00:03:45.655-00:03:46.195 create a user"},{"id":2,"group":1,"content":"src\/test\/java\/middleware\/aluno\/aluno[2:18]","start":1637373826211,"end":1637373826251,"title":"src\/test\/java\/middleware\/aluno\/aluno[2:18] 00:03:46.211-00:03:46.251 retrieve all inserted users"},{"id":3,"group":1,"content":"src\/test\/java\/middleware\/aluno\/aluno[3:24]","start":1637373826264,"end":1637373826357,"title":"src\/test\/java\/middleware\/aluno\/aluno[3:24] 00:03:46.264-00:03:46.357 update a specific user (must retrieve id first)"},{"id":4,"group":1,"content":"src\/test\/java\/middleware\/aluno\/aluno[4:63]","start":1637373826366,"end":1637373826398,"title":"src\/test\/java\/middleware\/aluno\/aluno[4:63] 00:03:46.366-00:03:46.398 delete a specific user (must retrieve id first)"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

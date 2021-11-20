@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Marcelo Cysneiros\",\n    \"curso\": \"Engenharia da Computação\",\n    \"nascimento\": \"25/10/1990\"\n}",
+					"raw": "{\n    \"nome\": \"Fulano da Silva\",\n    \"curso\": \"Engenharia de Software\",\n    \"nascimento\": \"01/01/1970\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,11 +69,11 @@
 		{
 			"name": "Atualizar",
 			"request": {
-				"method": "PATCH",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 1,\n    \"nome\": \"Marcelo Cysneiros\",\n    \"curso\": \"Engenharia de Software\",\n    \"nascimento\": \"25/10/1990\"\n}",
+					"raw": "{\n    \"id\": 1,\n    \"nome\": \"Fulano da Silva Sauro\",\n    \"curso\": \"Engenharia de Software\",\n    \"nascimento\": \"01/01/1970\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

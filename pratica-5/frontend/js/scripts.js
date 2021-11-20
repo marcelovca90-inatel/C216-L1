@@ -45,7 +45,7 @@ $(document).ready(function () {
         valorNascimento = $("#input_atualizar_nascimento").val();
         $.ajax({
             url: 'http://localhost:5000/aluno/atualizar',
-            type: 'PUT',
+            type: 'POST',
             crossDomain: true,
             dataType: 'json',
             data: {
@@ -63,7 +63,7 @@ $(document).ready(function () {
         valorId = $("#input_excluir_id").val();
         $.ajax({
             url: 'http://localhost:5000/aluno/excluir',
-            type: 'DELETE',
+            type: 'POST',
             crossDomain: true,
             dataType: 'json',
             data: {

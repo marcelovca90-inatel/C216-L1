@@ -5,10 +5,10 @@ const corsMiddleware = require('restify-cors-middleware');
 const cors = corsMiddleware({
 	preflightMaxAge: 5,
 	origins: ['*']
-  });
+});
 
 const server = restify.createServer({
-	name: 'Prática 5'
+	name: 'Prática 6'
 });
 
 server.use(restify.plugins.bodyParser());
@@ -99,7 +99,7 @@ function atualizar(req, res, next) {
 
 function excluir(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	//res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 	res.setHeader('content-type','application/json');
 	res.charSet('UTF-8');
 

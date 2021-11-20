@@ -1,8 +1,20 @@
 const restify = require('restify');
 
+const corsMiddleware = require('restify-cors-middleware');
+
+const cors = corsMiddleware({
+	preflightMaxAge: 5,
+	origins: ['*']
+  });
+
 const server = restify.createServer({
 	name: 'Prática 5'
 });
+
+server.use(restify.plugins.bodyParser());
+server.use(restify.plugins.queryParser());
+server.pre(cors.preflight);
+server.use(cors.actual);
 
 const mysql = require('mysql');
 
@@ -12,9 +24,6 @@ const connectionUri = {
     password: 'password',
     database: 'C216-L1'
 };
-
-server.use(restify.plugins.bodyParser());
-server.use(restify.plugins.queryParser());
 
 function inserir(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -90,6 +99,7 @@ function atualizar(req, res, next) {
 
 function excluir(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 	res.setHeader('content-type','application/json');
 	res.charSet('UTF-8');
 

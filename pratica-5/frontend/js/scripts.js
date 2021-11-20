@@ -26,7 +26,7 @@ $(document).ready(function () {
             crossDomain: true,
             dataType: 'json',
             success: function (result, status, xhr) {
-                table = '<table border="1">';
+                table = '<table class="table" border="1">';
                 table += '<tr><th>id</th><th>nome</th><th>curso</th><th>nascimento</th></tr>'
                 $.each(result, function (indice, obj) {
 					table += `<tr><td>${obj.id}</td><td>${obj.nome}</td><td>${obj.curso}</td><td>${obj.nascimento}</td></tr>`;

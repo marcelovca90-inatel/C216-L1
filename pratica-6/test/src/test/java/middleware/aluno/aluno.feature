@@ -1,85 +1,88 @@
 Feature: test script for 'aluno'
 
-Scenario: create a user
-    * def aluno =
-      """
-      {
-        "nome": "Fulano da Silva",
-        "curso": "Engenharia de Software",
-        "nascimento": "01/01/1970",
-      }
-      """
+Background:
+    * url 'http://localhost:5000/aluno'
 
-    Given url 'http://localhost:5000/aluno/inserir'
-    And request aluno
-    When method post
-    Then status 200
+	Scenario: create a user
+		* def aluno =
+		"""
+		{
+			"nome": "Fulano da Silva",
+			"curso": "Engenharia de Software",
+			"nascimento": "01/01/1970",
+		}
+		"""
 
-Scenario: retrieve all inserted users
-    Given url 'http://localhost:5000/aluno/listar'
-    When method get
-    Then status 200
-	And match each $ contains { id : '#number', nome : '#string', curso : '#string', nascimento : '#string' }
+		Given path 'inserir'
+		And request aluno
+		When method post
+		Then status 200
 
-Scenario: update a specific user (must retrieve id first)
+	Scenario: retrieve all inserted users
+		Given path 'listar'
+		When method get
+		Then status 200
+		And match each $ contains { id : '#number', nome : '#string', curso : '#string', nascimento : '#string' }
 
-	* def getRandomName =
-	"""
-	function() {
-	  return java.util.UUID.randomUUID() + '';
-	} 
-	"""
+	Scenario: update a specific user (must retrieve id first)
 
-	Given url 'http://localhost:5000/aluno/listar'
-	When method get
-	Then status 200
-	* def alunoAntes = response[0]
+		* def getRandomName =
+		"""
+		function() {
+		return java.util.UUID.randomUUID() + '';
+		} 
+		"""
 
-    * def alunoDepois =
-      """
-      {
-		"id": '#(alunoAntes.id)',
-        "nome": "#(getRandomName())",
-        "curso": '#(alunoAntes.curso)',
-        "nascimento": '#(alunoAntes.nascimento)'
-      }
-      """
+		Given path 'listar'
+		When method get
+		Then status 200
+		* def alunoOriginal = response[0]
 
-    Given url 'http://localhost:5000/aluno/atualizar'
-	And request alunoDepois
-    When method put
-    Then status 200
-	And match response.affectedRows == 1
+		* def alunoModificado =
+		"""
+		{
+			"id": '#(alunoOriginal.id)',
+			"nome": "#(getRandomName())",
+			"curso": '#(alunoOriginal.curso)',
+			"nascimento": '#(alunoOriginal.nascimento)'
+		}
+		"""
 
-	Given url 'http://localhost:5000/aluno/listar'
-	When method get
-	Then status 200
-	* def alunoAtualizado = response[0]
-	And match alunoAtualizado.id == alunoAntes.id
-	And match alunoAtualizado.nome == alunoDepois.nome
-	And match alunoAtualizado.curso == alunoDepois.curso
-	And match alunoAtualizado.nascimento == alunoDepois.nascimento
+		Given path 'atualizar'
+		And request alunoModificado
+		When method put
+		Then status 200
+		And match response.affectedRows == 1
 
-Scenario: delete a specific user (must retrieve id first)
+		Given path 'listar'
+		When method get
+		Then status 200
+		* def alunoDepois = response[0]
+		And match alunoDepois.id == alunoOriginal.id
+		And match alunoDepois.nome == alunoModificado.nome
+		And match alunoDepois.curso == alunoModificado.curso
+		And match alunoDepois.nascimento == alunoModificado.nascimento
 
-	Given url 'http://localhost:5000/aluno/listar'
-	When method get
-	Then status 200
-	* def aluno =
-	"""
-	{
-	  "id": '#(response[0].id)'
-	}
-	"""
+	Scenario: delete a specific user (must retrieve id first)
 
-	Given url 'http://localhost:5000/aluno/excluir'
-	And request aluno
-	When method delete
-	Then status 200
-	And match response.affectedRows == 1
+		Given path 'listar'
+		When method get
+		Then status 200
+		* def aluno =
+		"""
+		{
+		"id": '#(response[0].id)'
+		}
+		"""
 
-	Given url 'http://localhost:5000/aluno/excluir'
-	And request aluno
-	When method delete
-	Then status 200
-	And match response.affectedRows == 0
+		Given path 'excluir'
+		And request aluno
+		When method delete
+		Then status 200
+		And match response.affectedRows == 1
+
+		Given path 'excluir'
+		And request aluno
+		When method delete
+		Then status 200
+		And match response.affectedRows == 0

@@ -106,3 +106,4 @@ dist
 # Custom
 package-lock.json
 .DS_Store
+.vs_code

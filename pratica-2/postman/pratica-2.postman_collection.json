@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "3ed51929-0e82-461a-a9b0-e7b37696eeee",
+		"name": "Prática 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello (path param)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/hello/Marcelo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"hello",
+						"Marcelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello (query param)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/hello?nome=Marcelo&sobrenome=Cysneiros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"hello"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Marcelo"
+						},
+						{
+							"key": "sobrenome",
+							"value": "Cysneiros"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello (body)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Marcelo\",\n    \"sobrenome\": \"Cysneiros\",\n    \"idade\": 30,\n    \"formacao\": [\n        \"Bacharelado\",\n        \"Mestrado\"\n    ],\n    \"endereco\": {\n        \"rua\": \"Rua do Exemplo\",\n        \"numero\": 42,\n        \"bairro\": \"Centro\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
